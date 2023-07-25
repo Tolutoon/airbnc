@@ -1,1 +1,1 @@
-## Building Airbnb Clone with the MERN Stack.
+## Building Airbnb clone with the MERN Stack
