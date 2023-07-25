@@ -3,3 +3,19 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap');
 
+
+input[type='email'], input[type='password'], input[type='text'] {
+    @apply w-full border my-1 py-2 py-3 rounded-2xl px-2;
+}
+
+
+@layer base {
+    input[type='email'], input[type='password'], input[type='text']::placeholder{
+        @apply font-thin italic;
+    }
+}
+
+button.primary{
+    background-color: #F5385D;
+    @apply bg-primary p-2 w-full text-white rounded-2xl;
+}

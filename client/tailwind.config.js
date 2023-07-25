@@ -8,6 +8,9 @@ export default {
     extend: {
       fontFamily: {
         'sans' : ['Manrope', 'sans-serif']
+      },
+      colors: {
+        primary: '#F5385D',
       }
     },
   },

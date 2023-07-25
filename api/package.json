@@ -1,6 +1,6 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "main": "main.jsx",
+  "main": "src/main.jsx",
   "license": "MIT"
 }
