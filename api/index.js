@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const { default: mongoose } = require('mongoose');
+const jwt = require('jsonwebtoken')
+const mongoose = require('mongoose');
 const User = require('./models/Users.js');
 const bcrypt = require('bcryptjs');
 
@@ -41,7 +42,19 @@ app.post('/register', async (req,res) => {
 });
 
 app.post('/login', async (req, res) => {
-    
+    const {email, password} = req.body;
+    const userDoc = await User.findOne({email})
+    if (userDoc) {
+        const passOk = bcrypt.compareSync(password, userDoc.password);
+        if (passOk) {
+
+            res.cookie('token', '').json('pass ok');
+        } else {
+            res.status(422).json('pass not ok')
+        }
+    } else {
+        res.json('not found');
+    }
 })
 
 
