@@ -9,9 +9,14 @@ export default function Register() {
 
   function registerUser(ev) {
     ev.preventDefault();
-    axios.post('http://localhost:4000/register', {
-            name, email, password,
-    });
+    try {
+      axios.post('http://localhost:4000/register', {
+              name, email, password,
+      });
+      alert('Registration Successful')
+    } catch (e) {
+      alert ('Registration Failed')
+    }
   }
 
   return (
