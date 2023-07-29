@@ -4,7 +4,10 @@ import Layout from './Layout';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Index from './pages/Index';
+import axios from 'axios';
 
+
+axios.defaults.withCredentials = true;
 
 function App() {
 
